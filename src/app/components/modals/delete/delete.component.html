@@ -1,0 +1,40 @@
+<div *ngIf="loading">
+    <p>Loading ...</p>
+</div>
+<div *ngIf="!loading">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input value="{{project.name}}" disabled matInput placeholder="Your name" />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Description</mat-label>
+      <input value="{{project.description}}" disabled matInput placeholder="Description" />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Badge</mat-label>
+      <input value="{{project.badge}}" disabled matInput placeholder="$123" />
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Start At</mat-label>
+            <input value="{{project.startAt}}" disabled matInput />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Finish At</mat-label>
+            <input value="{{project.finishAt}}" disabled matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  
+    <button (click)="delete()" mat-raised-button color="accent" aria-label="Edit button">
+      Delete
+    </button>
+</div> 

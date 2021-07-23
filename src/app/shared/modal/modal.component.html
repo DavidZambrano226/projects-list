@@ -1,0 +1,37 @@
+<form [formGroup]="projectForm" class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input formControlName="name" matInput placeholder="Your name" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Description</mat-label>
+    <input formControlName="description" matInput placeholder="Description" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Badge</mat-label>
+    <input formControlName="badge" matInput placeholder="$123" />
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Start At</mat-label>
+          <input formControlName="startAt" matInput />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Finish At</mat-label>
+          <input formControlName="finishAt" matInput />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <button (click)="save()" mat-raised-button color="primary" aria-label="Edit button">
+    Save
+  </button>
+</form>

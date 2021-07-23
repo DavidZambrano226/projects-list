@@ -1,0 +1,12 @@
+table { 
+    width: 100%;
+}
+
+.container {
+    padding: 20px;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+}
